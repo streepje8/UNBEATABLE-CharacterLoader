@@ -1,0 +1,146 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <AssemblyName>UNBEATABLECharacterLoader</AssemblyName>
+        <Product>UNBEATABLE Character Loader</Product>
+        <Version>1.0.0</Version>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <LangVersion>latest</LangVersion>
+        <RestoreAdditionalProjectSources>
+            https://api.nuget.org/v3/index.json;
+            https://nuget.bepinex.dev/v3/index.json;
+            https://nuget.samboy.dev/v3/index.json
+        </RestoreAdditionalProjectSources>
+        <RootNamespace>Streep.UNBEATABLE.CharacterLoader</RootNamespace>
+        <Nullable>disable</Nullable>
+        <UnbeatableLocation>D:\SteamLibrary\steamapps\common\UNBEATABLE</UnbeatableLocation>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
+        <PackageReference Include="BepInEx.Core" Version="5.*" />
+        <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.5-beta1" />
+        <PackageReference Include="UnityEngine.Modules" Version="2022.3.41" IncludeAssets="compile" />
+        <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.2">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+        <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="Assembly-CSharp" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\Assembly-CSharp.dll</HintPath>
+        </Reference>
+        <Reference Include="Assembly-CSharp-firstpass" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+        </Reference>
+        <Reference Include="Cinemachine" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\Cinemachine.dll</HintPath>
+        </Reference>
+        <Reference Include="DOTween" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\DOTween.dll</HintPath>
+        </Reference>
+        <Reference Include="Dreamteck.Splines" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\Dreamteck.Splines.dll</HintPath>
+        </Reference>
+        <Reference Include="Dreamteck.Utilities" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\Dreamteck.Utilities.dll</HintPath>
+        </Reference>
+        <Reference Include="Facepunch.Steamworks.Win64" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\Facepunch.Steamworks.Win64.dll</HintPath>
+        </Reference>
+        <Reference Include="FMODUnity" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\FMODUnity.dll</HintPath>
+        </Reference>
+        <Reference Include="FMODUnityResonance" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\FMODUnityResonance.dll</HintPath>
+        </Reference>
+        <Reference Include="Gemserk.SelectionHistory" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\Gemserk.SelectionHistory.dll</HintPath>
+        </Reference>
+        <Reference Include="Google.Protobuf" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\Google.Protobuf.dll</HintPath>
+        </Reference>
+        <Reference Include="Lattice.Runtime" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\Lattice.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="Sirenix.OdinInspector.Attributes" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\Sirenix.OdinInspector.Attributes.dll</HintPath>
+        </Reference>
+        <Reference Include="Sirenix.OdinInspector.Modules.UnityLocalization" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\Sirenix.OdinInspector.Modules.UnityLocalization.dll</HintPath>
+        </Reference>
+        <Reference Include="Sirenix.Serialization" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\Sirenix.Serialization.dll</HintPath>
+        </Reference>
+        <Reference Include="Sirenix.Serialization.Config" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\Sirenix.Serialization.Config.dll</HintPath>
+        </Reference>
+        <Reference Include="Sirenix.Utilities" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\Sirenix.Utilities.dll</HintPath>
+        </Reference>
+        <Reference Include="UniTask" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\UniTask.dll</HintPath>
+        </Reference>
+        <Reference Include="UniTask.Addressables" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\UniTask.Addressables.dll</HintPath>
+        </Reference>
+        <Reference Include="UniTask.DOTween" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\UniTask.DOTween.dll</HintPath>
+        </Reference>
+        <Reference Include="UniTask.Linq" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\UniTask.Linq.dll</HintPath>
+        </Reference>
+        <Reference Include="UniTask.TextMeshPro" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\UniTask.TextMeshPro.dll</HintPath>
+        </Reference>
+        <Reference Include="VisualDesignCafe.Memory" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\VisualDesignCafe.Memory.dll</HintPath>
+        </Reference>
+        <Reference Include="VisualDesignCafe.Nature" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\VisualDesignCafe.Nature.dll</HintPath>
+        </Reference>
+        <Reference Include="VisualDesignCafe.Packages" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\VisualDesignCafe.Packages.dll</HintPath>
+        </Reference>
+        <Reference Include="VisualDesignCafe.Pooling" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\VisualDesignCafe.Pooling.dll</HintPath>
+        </Reference>
+        <Reference Include="VisualDesignCafe.Rendering" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\VisualDesignCafe.Rendering.dll</HintPath>
+        </Reference>
+        <Reference Include="VisualDesignCafe.Rendering.Instancing" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\VisualDesignCafe.Rendering.Instancing.dll</HintPath>
+        </Reference>
+        <Reference Include="VisualDesignCafe.Rendering.Nature" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\VisualDesignCafe.Rendering.Nature.dll</HintPath>
+        </Reference>
+        <Reference Include="VisualDesignCafe.ShaderX" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\VisualDesignCafe.ShaderX.dll</HintPath>
+        </Reference>
+        <Reference Include="VisualDesignCafe.Threading" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\VisualDesignCafe.Threading.dll</HintPath>
+        </Reference>
+        <Reference Include="XNode" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\XNode.dll</HintPath>
+        </Reference>
+        <Reference Include="XNodeOdin" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\XNodeOdin.dll</HintPath>
+        </Reference>
+        <Reference Include="YarnSpinner" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\YarnSpinner.dll</HintPath>
+        </Reference>
+        <Reference Include="YarnSpinner.Compiler" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\YarnSpinner.Compiler.dll</HintPath>
+        </Reference>
+        <Reference Include="YarnSpinner.Unity" Publicize="true">
+            <HintPath>$(UnbeatableLocation)\UNBEATABLE_Data\Managed\YarnSpinner.Unity.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+</Project>

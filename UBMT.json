@@ -1,0 +1,14 @@
+{
+	"Author": "streepje8",
+	"Description": "A mod which allows for character customization in UNBEATABLE.",
+	"CategorySuggestion": "Customization",
+	"RankedAllowedSuggestion": true,
+	"Website": "https://github.com/streepje8/UNBEATABLE-CharacterCustomization",
+	"BannerURL": "https://github.com/streepje8/UNBEATABLE-CharacterCustomization/blob/main/UBMT-Banner.png?raw=true",
+	"Releases": [
+		{
+			"Version": "v1.0.0",
+			"SourceURL": "https://github.com/streepje8/UNBEATABLE-CharacterCustomization/releases/download/UBMT-Release/UnbeatableCharacterMod.dll"
+		}
+	]
+}
